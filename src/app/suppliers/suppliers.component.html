@@ -1,0 +1,24 @@
+<div *ngIf="suppliers" class="col-md-6 offset-md-3">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor='let s of suppliers'>
+                <td scope="row">{{s.id}}</td>
+                <td>{{s.name}}</td>
+                <td>{{s.email}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<div *ngIf="!suppliers" class="text-center">
+    <div class="spinner-border" style="width: 3rem; height: 3rem;" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+</div>
